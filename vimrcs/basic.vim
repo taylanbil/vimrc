@@ -46,7 +46,7 @@ au FocusGained,BufEnter * checktime
 let mapleader = ","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+" nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -96,7 +96,7 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-set hlsearch
+"set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -218,13 +218,14 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <leader>w :Bclose<cr>
+"map <leader>w :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
 map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <leader>k :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -381,3 +382,5 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+nnoremap ; :
