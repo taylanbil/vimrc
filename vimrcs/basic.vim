@@ -383,4 +383,6 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-nnoremap ; :
+map ; :
+nnoremap <leader>m a<C-n>
+set number
