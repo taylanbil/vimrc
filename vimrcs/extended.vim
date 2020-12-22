@@ -29,7 +29,7 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
-colorscheme peaksea
+colorscheme ir_black
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -140,7 +140,7 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 map <leader>cc :botright cope<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
-map <leader>p :cp<cr>
+"map <leader>p :cp<cr>
 
 " Make sure that enter is never overriden in the quickfix window
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
@@ -172,3 +172,5 @@ endfunc
 func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
 endfunc
+
+map <leader>p oimport ipdbipdb.set_trace()
